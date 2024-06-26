@@ -30,10 +30,11 @@
     }
     .mobile-image {
       display: none;
-      width: auto;
-      height: 100%; /* Adjust based on your mobile image aspect ratio */
+      /* width: 250%; */
+      scale: 1;
+      height: auto; /* Adjust based on your mobile image aspect ratio */
     }
-    @media (max-width: 350px) {
+    @media (max-width: 750px) {
       .large-image {
         display: none;
       }
@@ -46,7 +47,7 @@
 <body>
   <div class="scroll-container">
     <img src="MacBook Pro 16_ - 69.png" alt="Large Image" class="large-image" id="largeImage" />
-    <img src="Home (1).png" alt="Mobile Image" class="mobile-image" id="mobileImage" />
+    <img src="Mobile Image.png" alt="Mobile Image" class="mobile-image" id="mobileImage" />
   </div>
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
@@ -74,7 +75,7 @@
 
     // Function to check if it's a mobile device
     function isMobile() {
-      return window.innerWidth <= 350;
+      return window.innerWidth <= 750;
     }
 
     // Function to create animation timeline
@@ -111,10 +112,10 @@
 
     // Mobile coordinates (you'll need to adjust these values)
     const mobileCoords = [
-      { x: -150, y: -150 },
-      { x: 5, y: -400 },
-      { x: -250, y: -800 },
-      { x: 10, y: -1200 }
+      { x: -950, y: -250 },
+      { x: -280, y: -800 },
+      { x: -900, y: -1100 },
+      { x: -350, y: -1300 }
     ];
 
     // Create and update animation based on screen size
